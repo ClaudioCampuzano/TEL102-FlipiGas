@@ -28,13 +28,19 @@ SOURCES += \
         loginwindow.cpp \
     vendedorwindow.cpp \
     administradorwindow.cpp \
-    camionerowindow.cpp
+    camionerowindow.cpp \
+    camion.cpp \
+    pedidos.cpp \
+    cilindros.cpp
 
 HEADERS += \
         loginwindow.h \
     vendedorwindow.h \
     administradorwindow.h \
-    camionerowindow.h
+    camionerowindow.h \
+    camion.h \
+    pedidos.h \
+    cilindros.h
 
 FORMS += \
         loginwindow.ui \

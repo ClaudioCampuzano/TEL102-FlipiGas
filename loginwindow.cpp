@@ -23,29 +23,7 @@ LoginWindow::~LoginWindow()
 }
 
 bool Verificador_Camionero(QString user, QString pass){
-    if (((user == "C_Alegre")&(pass == "Alegre"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Blanco")&(pass == "Blanco"))|((user == "C_Bellavista")&(pass == "Bellavista"))
-            |((user == "C_Concepcion")&(pass == "Concepcion"))|((user == "C_Cordillera")&(pass == "Cordillera"))
-            |((user == "C_Delicias")&(pass == "Delicias"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron"))|((user == "C_Baron")&(pass == "Baron"))
-            |((user == "C_Baron")&(pass == "Baron")))
-        return true;
-    return false;
+    return true;
 }
 
 void LoginWindow::on_pushButton_Login_clicked()
