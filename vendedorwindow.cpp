@@ -2,10 +2,9 @@
 #include "ui_vendedorwindow.h"
 #include <QMessageBox>
 #include <pedido.h>
-#include <cilindro.h>
-#include <deque>
+#include <QTableWidgetItem>
 
-//deque <Pedidos> pedidos;
+deque <Pedido> pedidos;
 
 VendedorWindow::VendedorWindow(QWidget *parent) :
     QDialog(parent),
@@ -40,15 +39,19 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
     QMessageBox::StandardButton respuesta;
     respuesta = QMessageBox::question(this, "Confirmacion", "¿Esta seguro de ingresar pedido?", QMessageBox::Yes|QMessageBox::No);
     if (respuesta == QMessageBox::Yes) {
-/*
-        deque<Cilindros> Cilindros;
+        int valor_acumulado = 0;
+        deque<Cilindro> Cilindros;
         for(int i=0; i<ui->PedidosTemporales->rowCount();i++){
-
+            QTableWidgetItem *cantidad = ui->PedidosTemporales->item(i,0);
+            QTableWidgetItem *capacidad = ui->PedidosTemporales->item(i,1);
+            QTableWidgetItem *tipo = ui->PedidosTemporales->item(i,2);
+            Cilindro *cilin = new Cilindro((cantidad->text()).toInt(),(capacidad->text()).toInt(),(tipo->text()).toStdString());
+            Cilindros.push_back(*cilin);
+            valor_acumulado += cilin->Precio();
         }
-        Pedidos *pedido_temp = Pedidos(ui->lineEdit_nombre->text(),ui->comboBox_cerro->currentText(),
-                                       ui->comboBox_tipopago->currentText(),Cilindros);
+        Pedido *pedido_temp = new Pedido((ui->lineEdit_nombre->text()).toStdString(),(ui->comboBox_cerro->currentText()).toStdString(),
+                                       (ui->comboBox_tipopago->currentText()).toStdString(),Cilindros,valor_acumulado);
         pedidos.push_back(*pedido_temp);
-*/
         QMessageBox::information(this,"Bien","Pedido ingresado :)");
         this->close();
     }else{

@@ -14,7 +14,7 @@ private:
 public:
     Pedido();
     Pedido(string nombre_solicitante,string cerro_destino,string medio_pago,
-            deque<Cilindro> cilindros);
+            deque<Cilindro> cilindros,int valor_entrega);
 };
 
 #endif // PEDIDOS_H

@@ -9,12 +9,13 @@ class Cilindro
 {
 
 private:
-    int cantidad_de_cilindros;
+    int cantidad;
     int capacidad;
     string tipo;
 public:
     Cilindro();
-    Cilindro(int cantidad_de_cilindros, int capacidad, string tipo);
+    Cilindro(int cantidad, int capacidad, string tipo);
+    int Precio();
 };
 
 #endif // CILINDRO_H

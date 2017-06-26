@@ -10,7 +10,6 @@ private:
     int capacidad;
     string cerro_designado;
     deque<Pedido> pedidos;
-
 public:
     Camion();
     Camion(string cerro_designado,int capacidad);
