@@ -30,8 +30,8 @@ SOURCES += \
     administradorwindow.cpp \
     camionerowindow.cpp \
     camion.cpp \
-    pedidos.cpp \
-    cilindros.cpp
+    cilindro.cpp \
+    pedido.cpp
 
 HEADERS += \
         loginwindow.h \
@@ -39,8 +39,8 @@ HEADERS += \
     administradorwindow.h \
     camionerowindow.h \
     camion.h \
-    pedidos.h \
-    cilindros.h
+    cilindro.h \
+    pedido.h
 
 FORMS += \
         loginwindow.ui \

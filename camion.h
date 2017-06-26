@@ -1,6 +1,7 @@
 #ifndef CAMION_H
 #define CAMION_H
-#include <pedidos.h>
+#include <pedido.h>
+#include<iostream>
 
 class Camion
 {
@@ -8,7 +9,7 @@ private:
     bool enReparto;
     int capacidad;
     string cerro_designado;
-    deque<Pedidos> pedidos;
+    deque<Pedido> pedidos;
 
 public:
     Camion();

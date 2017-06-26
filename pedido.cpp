@@ -1,10 +1,10 @@
-#include "pedidos.h"
+#include "pedido.h"
 
-Pedidos::Pedidos()
+Pedido::Pedido()
 {
 
 }
-Pedidos::Pedidos(string nombre_solicitante, string cerro_destino,
+Pedido::Pedido(string nombre_solicitante, string cerro_destino,
                  string medio_pago, deque<Cilindros> cilindros){
     this->nombre_solicitante=nombre_solicitante;
     this->cerro_destino=cerro_destino;
