@@ -11,6 +11,7 @@ VendedorWindow::VendedorWindow(QWidget *parent) :
     ui(new Ui::VendedorWindow)
 {
     ui->setupUi(this);
+    fila = -1;
 }
 
 VendedorWindow::~VendedorWindow()
@@ -52,7 +53,7 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
         Pedido *pedido_temp = new Pedido((ui->lineEdit_nombre->text()).toStdString(),(ui->comboBox_cerro->currentText()).toStdString(),
                                        (ui->comboBox_tipopago->currentText()).toStdString(),Cilindros,valor_acumulado);
         pedidos.push_back(*pedido_temp);
-        QMessageBox::information(this,"Bien","Pedido ingresado :)");
+        QMessageBox::information(this,"Bien","Precio:\nTiempo de espera: \nPedido ingresado :)");
         this->close();
     }else{
         QMessageBox::information(this,"Ok","Ok sigue agregando :3");
@@ -60,5 +61,12 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
     }
 }
 
+void VendedorWindow::on_PedidosTemporales_itemClicked(QTableWidgetItem *item)
+{
+    fila = item->row();
+}
 
-
+void VendedorWindow::on_bt_borrarSelecc_clicked()
+{
+    ui->PedidosTemporales->removeRow(fila);
+}

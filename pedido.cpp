@@ -14,3 +14,6 @@ Pedido::Pedido(string nombre_solicitante, string cerro_destino,
     this->valor_entrega = valor_entrega;
     this->tiempo_entrega = 15 +rand()%45;
 }
+int Pedido::get_TiempoEntrega(){
+    return this->tiempo_entrega;
+}

@@ -1,661 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>VendedorWindow</class>
  <widget class="QDialog" name="VendedorWindow">
- <property name="geometry">
-  <rect>
-   <x>0</x>
-   <y>0</y>
-   <width>590</width>
-   <height>473</height>
-  </rect>
- </property>
- <property name="windowTitle">
-  <string>Dialog</string>
- </property>
- <property name="styleSheet">
-  <string notr="true">background-color: rgb(255, 255, 255);</string>
- </property>
- <widget class="QLabel" name="label_4">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>91</height>
+    <width>590</width>
+    <height>473</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>16</pointsize>
-   </font>
-  </property>
-  <property name="cursor">
-   <cursorShape>UpArrowCursor</cursorShape>
+  <property name="windowTitle">
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(61, 61, 61);
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>591</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>UpArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(61, 61, 61);
 color: rgb(255, 255, 255);</string>
-  </property>
-  <property name="text">
-   <string>                                  &quot;Menu Vendedor&quot;</string>
-  </property>
- </widget>
- <widget class="QLabel" name="label">
-  <property name="geometry">
-   <rect>
-    <x>20</x>
-    <y>110</y>
-    <width>201</width>
-    <height>31</height>
-   </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>12</pointsize>
-   </font>
-  </property>
-  <property name="text">
-   <string>&gt; Ingreso de solicitud:</string>
-  </property>
- </widget>
- <widget class="QGroupBox" name="groupBox">
-  <property name="geometry">
-   <rect>
-    <x>30</x>
-    <y>150</y>
-    <width>541</width>
-    <height>81</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>Datos del Solicitante</string>
-  </property>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>12</x>
-     <y>22</y>
-     <width>123</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>9</pointsize>
-    </font>
    </property>
    <property name="text">
-    <string>Nombre del solicitante:</string>
+    <string>                                  &quot;Menu Vendedor&quot;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_nombre">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>141</x>
-     <y>22</y>
-     <width>231</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>17</x>
-     <y>50</y>
-     <width>360</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QLabel" name="label_6">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Cerro Destino:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QComboBox" name="comboBox_cerro">
-      <item>
-       <property name="text">
-        <string>Alegre</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Barón</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Blanco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bellavista</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Concepción</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Cordillera</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Delicias</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>El Litre</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>El Molina</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Esperanza</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Jiménez</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Larraín</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Cruz</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Cárcel</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Florida</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Merced</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>La Virgen</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Cañas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Jarcias</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Las Monjas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Los Placeres</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Loceras</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Lecheros</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mariposas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Mesilla</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Miraflores</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>O´Higgins</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Pajonal</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Panteón</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Playa Ancha</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Perdices</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Polanco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Ramaditas</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reina Victoria</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Rodelillo</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Rocuant</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>San Juan de Dios</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Santo Domingo</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>San Francisco</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Toro</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Yungay</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_8">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>   Medio de pago:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QComboBox" name="comboBox_tipopago">
-      <item>
-       <property name="text">
-        <string>Cheque</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Efectivo</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Debito</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Credito</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <widget class="QGroupBox" name="groupBox_2">
-  <property name="geometry">
-   <rect>
-    <x>30</x>
-    <y>240</y>
-    <width>541</width>
-    <height>101</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>Datos del pedido</string>
-  </property>
-  <widget class="QPushButton" name="bt_agregarpedido">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>60</y>
-     <width>111</width>
+     <x>20</x>
+     <y>110</y>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI</family>
+     <pointsize>12</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>Agregar a pedido</string>
+    <string>&gt; Ingreso de solicitud:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_tipo">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>30</y>
-     <width>86</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Catalitico</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>No Catalitico</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QComboBox" name="comboBox_kg">
-   <property name="geometry">
-    <rect>
-     <x>275</x>
-     <y>30</y>
-     <width>60</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>5 [kg]</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>11 [kg]</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>15 [kg]</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>45 [kg]</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QSpinBox" name="spinBox_cntCilindros">
-   <property name="geometry">
-    <rect>
-     <x>126</x>
-     <y>31</y>
-     <width>35</width>
-     <height>18</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>341</x>
-     <y>30</y>
-     <width>83</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>9</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Tipo de cilindros</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>8</x>
-     <y>30</y>
-     <width>112</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>9</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Cantidad de cilindros</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>167</x>
-     <y>30</y>
-     <width>102</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>9</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Tamaño del cilindro</string>
-   </property>
-  </widget>
- </widget>
- <widget class="QGroupBox" name="groupBox_3">
-  <property name="geometry">
-   <rect>
-    <x>440</x>
-    <y>340</y>
-    <width>131</width>
-    <height>111</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>Detalles totales</string>
-  </property>
-  <widget class="QPushButton" name="bt_ingresarpedido">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>70</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-    </font>
-   </property>
-   <property name="text">
-    <string>Ingresar Pedido</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>1</x>
-     <y>40</y>
-     <width>127</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QLabel" name="label_13">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Tiempo App: </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="tiempo_total">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>1</x>
-     <y>21</y>
-     <width>127</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_4">
-    <item>
-     <widget class="QLabel" name="label_12">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Total pedido: </string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="total_pedido">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <widget class="QGroupBox" name="groupBox_4">
-  <property name="geometry">
-   <rect>
-    <x>30</x>
-    <y>340</y>
-    <width>401</width>
-    <height>111</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>Carro de compras</string>
-  </property>
-  <widget class="QTableWidget" name="PedidosTemporales">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>381</width>
+     <x>30</x>
+     <y>150</y>
+     <width>541</width>
      <height>81</height>
     </rect>
    </property>
-   <column>
-    <property name="text">
-     <string>Cantidad</string>
+   <property name="title">
+    <string>Datos del Solicitante</string>
+   </property>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>22</y>
+      <width>123</width>
+      <height>16</height>
+     </rect>
     </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Tamaño</string>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
     </property>
-   </column>
-   <column>
     <property name="text">
-     <string>Tipo de cilindro</string>
+     <string>Nombre del solicitante:</string>
     </property>
-   </column>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_nombre">
+    <property name="geometry">
+     <rect>
+      <x>141</x>
+      <y>22</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>50</y>
+      <width>360</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Cerro Destino:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_cerro">
+       <item>
+        <property name="text">
+         <string>Alegre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Barón</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Blanco</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bellavista</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Concepción</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cordillera</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Delicias</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>El Litre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>El Molina</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Esperanza</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jiménez</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Larraín</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La Cruz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La Cárcel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La Florida</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La Merced</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>La Virgen</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Las Cañas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Las Jarcias</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Las Monjas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Los Placeres</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Loceras</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lecheros</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mariposas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mesilla</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Miraflores</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>O´Higgins</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pajonal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Panteón</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Playa Ancha</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Perdices</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Polanco</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ramaditas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reina Victoria</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rodelillo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rocuant</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>San Juan de Dios</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Santo Domingo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>San Francisco</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Toro</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Yungay</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>   Medio de pago:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_tipopago">
+       <item>
+        <property name="text">
+         <string>Cheque</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Efectivo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Debito</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Credito</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>541</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Datos del pedido</string>
+   </property>
+   <widget class="QPushButton" name="bt_agregarpedido">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>60</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Agregar a pedido</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_tipo">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>30</y>
+      <width>86</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Catalitico</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>No Catalitico</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBox_kg">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>30</y>
+      <width>60</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>5 [kg]</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>11 [kg]</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>15 [kg]</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>45 [kg]</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_cntCilindros">
+    <property name="geometry">
+     <rect>
+      <x>126</x>
+      <y>31</y>
+      <width>35</width>
+      <height>18</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>341</x>
+      <y>30</y>
+      <width>83</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tipo de cilindros</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>30</y>
+      <width>112</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Cantidad de cilindros</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>167</x>
+      <y>30</y>
+      <width>102</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tamaño del cilindro</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>350</y>
+     <width>111</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLabel" name="tiempo_total">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>41</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>93</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="bt_borrarSelecc">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Borrar Seleccion</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bt_ingresarpedido">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ingresar Pedido</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>421</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Carro de compras</string>
+   </property>
+   <widget class="QTableWidget" name="PedidosTemporales">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>381</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Cantidad</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Tamaño</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Tipo de cilindro</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>label</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox_3</zorder>
+  <zorder>groupBox_4</zorder>
+  <zorder>PedidosTemporales</zorder>
  </widget>
-</widget>
-<resources/>
-<connections/>
+ <resources/>
+ <connections/>
 </ui>
-

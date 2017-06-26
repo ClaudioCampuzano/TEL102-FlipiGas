@@ -2,7 +2,7 @@
 #define VENDEDORWINDOW_H
 
 #include <QDialog>
-
+#include <QTableWidgetItem>
 namespace Ui {
 class VendedorWindow;
 }
@@ -21,9 +21,13 @@ private slots:
 
     void on_bt_agregarpedido_clicked();
 
+    void on_PedidosTemporales_itemClicked(QTableWidgetItem *item);
+
+    void on_bt_borrarSelecc_clicked();
 
 private:
     Ui::VendedorWindow *ui;
+    int fila;
 };
 
 #endif // VENDEDORWINDOW_H
