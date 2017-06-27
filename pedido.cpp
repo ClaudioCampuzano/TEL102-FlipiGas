@@ -1,10 +1,8 @@
 #include "pedido.h"
-#include <time.h>
+#include <ctime>
 
 Pedido::Pedido()
-{
-
-}
+{}
 Pedido::Pedido(string nombre_solicitante, string cerro_destino,
                  string medio_pago, deque<Cilindro> cilindro, int valor_entrega){
     this->nombre_solicitante=nombre_solicitante;
@@ -16,4 +14,7 @@ Pedido::Pedido(string nombre_solicitante, string cerro_destino,
 }
 int Pedido::get_TiempoEntrega(){
     return this->tiempo_entrega;
+}
+int Pedido::get_ValorEntrega(){
+    return this->valor_entrega;
 }

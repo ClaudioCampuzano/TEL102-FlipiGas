@@ -38,27 +38,38 @@ void VendedorWindow::on_bt_agregarpedido_clicked()
 void VendedorWindow::on_bt_ingresarpedido_clicked()
 {
     QMessageBox::StandardButton respuesta;
-    respuesta = QMessageBox::question(this, "Confirmacion", "¿Esta seguro de ingresar pedido?", QMessageBox::Yes|QMessageBox::No);
-    if (respuesta == QMessageBox::Yes) {
-        int valor_acumulado = 0;
-        deque<Cilindro> Cilindros;
-        for(int i=0; i<ui->PedidosTemporales->rowCount();i++){
-            QTableWidgetItem *cantidad = ui->PedidosTemporales->item(i,0);
-            QTableWidgetItem *capacidad = ui->PedidosTemporales->item(i,1);
-            QTableWidgetItem *tipo = ui->PedidosTemporales->item(i,2);
-            Cilindro *cilin = new Cilindro((cantidad->text()).toInt(),(capacidad->text()).toInt(),(tipo->text()).toStdString());
-            Cilindros.push_back(*cilin);
-            valor_acumulado += cilin->Precio();
-        }
-        Pedido *pedido_temp = new Pedido((ui->lineEdit_nombre->text()).toStdString(),(ui->comboBox_cerro->currentText()).toStdString(),
-                                       (ui->comboBox_tipopago->currentText()).toStdString(),Cilindros,valor_acumulado);
-        pedidos.push_back(*pedido_temp);
-        QMessageBox::information(this,"Bien","Precio:\nTiempo de espera: \nPedido ingresado :)");
-        this->close();
-    }else{
-        QMessageBox::information(this,"Ok","Ok sigue agregando :3");
-
-    }
+    if (ui->PedidosTemporales->rowCount()!=0){
+        respuesta = QMessageBox::question(this, "Confirmacion", "¿Esta seguro de ingresar pedido?", QMessageBox::Yes|QMessageBox::No);
+        if (respuesta == QMessageBox::Yes) {
+            int precio_pedido = 0;
+            deque<Cilindro> cilindros;
+            for(int i=0; i<ui->PedidosTemporales->rowCount();i++){
+                QTableWidgetItem *cnt = ui->PedidosTemporales->item(i,0);
+                QTableWidgetItem *cap = ui->PedidosTemporales->item(i,1);
+                QTableWidgetItem *tip = ui->PedidosTemporales->item(i,2);
+                int cantidad = (cnt->text()).toInt();
+                int capacidad = (cap->text()).toInt();
+                string tipo = (tip->text()).toStdString();
+                Cilindro *cilin = new Cilindro(cantidad,capacidad,tipo);
+                cilindros.push_back(*cilin);
+                precio_pedido += cilin->Precio();
+            }
+            string nombre = ui->lineEdit_nombre->text().toStdString();
+            string cerro_destino = ui->comboBox_cerro->currentText().toStdString();
+            string medio_pago = ui->comboBox_tipopago->currentText().toStdString();
+            Pedido *pedid = new Pedido(nombre,cerro_destino,medio_pago,cilindros,precio_pedido);
+            pedidos.push_back(*pedid);
+            QMessageBox mensaje;
+            mensaje.setWindowTitle(" ");
+            mensaje.setText("Solicitud ingresada\n"
+                           "Total a pagar $"+QString::number(precio_pedido)+"\n"
+                           "Tiempo de espera estimado:"+QString::number(pedid->get_TiempoEntrega())+"[min]");
+            mensaje.exec();
+            ui->PedidosTemporales->setRowCount(0);
+        }else
+            QMessageBox::information(this,"Ok","Ok sigue agregando o quitando:3");
+    }else
+        QMessageBox::information(this,"Mal","No has agregado ninguna wea");
 }
 
 void VendedorWindow::on_PedidosTemporales_itemClicked(QTableWidgetItem *item)

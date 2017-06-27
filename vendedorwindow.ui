@@ -380,7 +380,7 @@ color: rgb(255, 255, 255);</string>
      <x>30</x>
      <y>240</y>
      <width>541</width>
-     <height>101</height>
+     <height>91</height>
     </rect>
    </property>
    <property name="title">
@@ -389,8 +389,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="bt_agregarpedido">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>60</y>
+      <x>340</x>
+      <y>30</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -404,131 +404,140 @@ color: rgb(255, 255, 255);</string>
      <string>Agregar a pedido</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_tipo">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>30</y>
-      <width>86</width>
+      <x>90</x>
+      <y>40</y>
+      <width>187</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tamaño del cilindro en Kg:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_kg">
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>45</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>158</width>
       <height>20</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>Catalitico</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>No Catalitico</string>
-     </property>
-    </item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Cantidad de cilindros:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox_cntCilindros"/>
+     </item>
+    </layout>
    </widget>
-   <widget class="QComboBox" name="comboBox_kg">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>275</x>
-      <y>30</y>
-      <width>60</width>
-      <height>20</height>
+      <x>90</x>
+      <y>60</y>
+      <width>185</width>
+      <height>22</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>5 [kg]</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>11 [kg]</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>15 [kg]</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>45 [kg]</string>
-     </property>
-    </item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Tipo de cilindros:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_tipo">
+       <item>
+        <property name="text">
+         <string>Catalitico</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No Catalitico</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QSpinBox" name="spinBox_cntCilindros">
-    <property name="geometry">
-     <rect>
-      <x>126</x>
-      <y>31</y>
-      <width>35</width>
-      <height>18</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>341</x>
-      <y>30</y>
-      <width>83</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Tipo de cilindros</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>8</x>
-      <y>30</y>
-      <width>112</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Cantidad de cilindros</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>167</x>
-      <y>30</y>
-      <width>102</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Tamaño del cilindro</string>
-    </property>
-   </widget>
+   <zorder>bt_agregarpedido</zorder>
+   <zorder>comboBox_tipo</zorder>
+   <zorder>comboBox_kg</zorder>
+   <zorder>spinBox_cntCilindros</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_2</zorder>
+   <zorder>comboBox_tipo</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_3</zorder>
   </widget>
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>350</y>
+     <y>340</y>
      <width>111</width>
-     <height>101</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="title">
@@ -588,9 +597,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>340</y>
-     <width>421</width>
-     <height>121</height>
+     <y>330</y>
+     <width>411</width>
+     <height>131</height>
     </rect>
    </property>
    <property name="title">
@@ -602,7 +611,7 @@ color: rgb(255, 255, 255);</string>
       <x>10</x>
       <y>20</y>
       <width>381</width>
-      <height>91</height>
+      <height>101</height>
      </rect>
     </property>
     <column>

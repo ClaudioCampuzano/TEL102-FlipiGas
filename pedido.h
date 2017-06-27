@@ -8,14 +8,15 @@ private:
     string nombre_solicitante;
     string  cerro_destino;
     string medio_pago;
-    deque<Cilindro> cilindros;
     int tiempo_entrega;
     int valor_entrega;
+    deque<Cilindro> cilindros;
 public:
     Pedido();
     Pedido(string nombre_solicitante,string cerro_destino,string medio_pago,
             deque<Cilindro> cilindros,int valor_entrega);
     int get_TiempoEntrega();
+    int get_ValorEntrega();
 };
 
 #endif // PEDIDOS_H
