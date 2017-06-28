@@ -1,5 +1,6 @@
 #include "camionerowindow.h"
 #include "ui_camionerowindow.h"
+#include "camion.h"
 
 CamioneroWindow::CamioneroWindow(QWidget *parent) :
     QDialog(parent),

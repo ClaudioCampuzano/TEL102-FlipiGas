@@ -1,165 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>CamioneroWindow</class>
  <widget class="QDialog" name="CamioneroWindow">
-  <property name="geometry">
-  <rect>
-   <x>0</x>
-   <y>0</y>
-   <width>591</width>
-   <height>405</height>
-  </rect>
- </property>
- <property name="windowTitle">
-  <string>Dialog</string>
- </property>
- <property name="styleSheet">
-  <string notr="true">background-color: rgb(255, 255, 255);</string>
- </property>
- <widget class="QLabel" name="label_4">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>91</height>
+    <height>405</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>16</pointsize>
-   </font>
-  </property>
-  <property name="cursor">
-   <cursorShape>UpArrowCursor</cursorShape>
+  <property name="windowTitle">
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(61, 61, 61);
-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <property name="text">
-   <string>                                  &quot;Menu Camionero&quot;</string>
-  </property>
- </widget>
- <widget class="QLabel" name="label">
-  <property name="geometry">
-   <rect>
-    <x>20</x>
-    <y>110</y>
-    <width>201</width>
-    <height>31</height>
-   </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>12</pointsize>
-   </font>
-  </property>
-  <property name="text">
-   <string>&gt;Solicitudes en marcha:</string>
-  </property>
- </widget>
- <widget class="QPushButton" name="bt_recargar">
-  <property name="geometry">
-   <rect>
-    <x>400</x>
-    <y>110</y>
-    <width>111</width>
-    <height>31</height>
-   </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-   </font>
-  </property>
-  <property name="text">
-   <string>Recargar solicitudes</string>
-  </property>
- </widget>
- <widget class="QGroupBox" name="groupBox">
-  <property name="geometry">
-   <rect>
-    <x>60</x>
-    <y>180</y>
-    <width>491</width>
-    <height>171</height>
-   </rect>
-  </property>
-  <property name="title">
-   <string>Solicitudes</string>
-  </property>
-  <widget class="QTableWidget" name="tableWidget">
+  <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>461</width>
-     <height>141</height>
+     <x>0</x>
+     <y>0</y>
+     <width>591</width>
+     <height>91</height>
     </rect>
    </property>
-   <column>
-    <property name="text">
-     <string>Detalles de la solicitud</string>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>UpArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>                                  &quot;Menu Camionero&quot;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&gt;Solicitudes en marcha:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_recargar">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>110</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Recargar solicitudes</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>180</y>
+     <width>491</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Solicitudes</string>
+   </property>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>461</width>
+      <height>141</height>
+     </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-     </font>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Entregado</string>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-     </font>
-    </property>
-   </column>
+    <column>
+     <property name="text">
+      <string>Detalles de la solicitud</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Entregado</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>140</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Camion cerro:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Nombrecerrocamion">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>150</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
- <widget class="QLabel" name="label_2">
-  <property name="geometry">
-   <rect>
-    <x>60</x>
-    <y>140</y>
-    <width>81</width>
-    <height>31</height>
-   </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>10</pointsize>
-   </font>
-  </property>
-  <property name="text">
-   <string>Camion cerro:</string>
-  </property>
- </widget>
- <widget class="QLabel" name="Nombrecerrocamion">
-  <property name="geometry">
-   <rect>
-    <x>150</x>
-    <y>150</y>
-    <width>47</width>
-    <height>13</height>
-   </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI</family>
-    <pointsize>10</pointsize>
-   </font>
-  </property>
-  <property name="text">
-   <string/>
-  </property>
- </widget>
-</widget>
-<resources/>
-<connections/>
+ <resources/>
+ <connections/>
 </ui>

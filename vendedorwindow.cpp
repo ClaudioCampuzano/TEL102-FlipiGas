@@ -19,7 +19,6 @@ VendedorWindow::~VendedorWindow()
     delete ui;
 }
 
-
 void VendedorWindow::on_bt_agregarpedido_clicked()
 {
     if (ui->spinBox_cntCilindros->value() == 0)

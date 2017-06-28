@@ -11,6 +11,7 @@ private:
     int tiempo_entrega;
     int valor_entrega;
     deque<Cilindro> cilindros;
+    bool entregado;
 public:
     Pedido();
     Pedido(string nombre_solicitante,string cerro_destino,string medio_pago,

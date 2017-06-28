@@ -13,6 +13,9 @@ private:
 public:
     Camion();
     Camion(string cerro_designado,int capacidad);
+    void set_Pedidos(deque<Pedido> pedidos);
+    string get_Cerro();
+    int get_Capacidad();
 };
 
 #endif // CAMION_H
