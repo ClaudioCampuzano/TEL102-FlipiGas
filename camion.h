@@ -9,11 +9,11 @@ private:
     bool enReparto;
     int capacidad;
     string cerro_designado;
-    deque<Pedido> pedidos;
+    vector<Pedido> pedidos;
 public:
     Camion();
     Camion(string cerro_designado,int capacidad);
-    void set_Pedidos(deque<Pedido> pedidos);
+    void set_Pedidos(vector<Pedido> pedidos);
     string get_Cerro();
     int get_Capacidad();
 };

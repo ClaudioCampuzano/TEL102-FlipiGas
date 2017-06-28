@@ -7,12 +7,12 @@
 
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
-#include <QMessageBox>
-#include <deque>
-#include <camion.h>
-#include <vector>
 
-vector<Camion> camiones;
+#include <QMessageBox>
+#include <camion.h>
+
+vector<Camion> LoginWindow::camiones;
+int LoginWindow::indice_login;
 
 void Creando_Camioneros();
 
@@ -49,29 +49,31 @@ void Creando_Camioneros(){
         Camion *cami = new Camion(cerros[i],25);
         Camion *cami1 = new Camion(cerros[i],50);
         Camion *cami2 = new Camion(cerros[i],100);
-        camiones.push_back(*cami);
-        camiones.push_back(*cami1);
-        camiones.push_back(*cami2);
+
+        LoginWindow::camiones.push_back(*cami);
+        LoginWindow::camiones.push_back(*cami1);
+        LoginWindow::camiones.push_back(*cami2);
     }
 }
 
-bool Verificador_Camionero(QString user, QString pass){
-    for (int i=0; i<camiones.size();i++){
+int Verificador_Camionero(QString user, QString pass){
+    for (int i=0; i<LoginWindow::camiones.size();i++){
         Camion temporal;
-        temporal =camiones[i];
+        temporal =LoginWindow::camiones[i];
         if (temporal.get_Cerro()==pass.toStdString())
             if(QString::number(temporal.get_Capacidad()) == user.split("_").at(0))
                 if(temporal.get_Cerro() == user.split("_").at(1).toStdString())
-                    return true;
+                    return i;
     }
-    return false;
+    return -1;
 }
 
 void LoginWindow::on_pushButton_Login_clicked(){
     QString usuario = ui->lineEdit_user->text();
     QString contrasena = ui->lineEdit_pass->text();
     if (ui->checkBox_Qcamionero->checkState()){
-        if (Verificador_Camionero(usuario, contrasena)){
+        indice_login=Verificador_Camionero(usuario, contrasena);
+        if (indice_login!=-1){
             camionero = new CamioneroWindow(this);
             camionero->show();
         }else

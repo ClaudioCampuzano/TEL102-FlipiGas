@@ -5,6 +5,7 @@
 #include "administradorwindow.h"
 #include "vendedorwindow.h"
 #include "camionerowindow.h"
+#include "camion.h"
 
 namespace Ui {
 class LoginWindow;
@@ -17,7 +18,8 @@ class LoginWindow : public QMainWindow
 public:
     explicit LoginWindow(QWidget *parent = 0);
     ~LoginWindow();
-
+    static vector<Camion> camiones;
+    static int indice_login;
 private slots:
     void on_pushButton_Login_clicked();
 

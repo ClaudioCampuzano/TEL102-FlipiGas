@@ -1,7 +1,6 @@
 #ifndef CILINDRO_H
 #define CILINDRO_H
 #include <iostream>
-#include <deque>
 
 using namespace std;
 

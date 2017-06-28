@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QTableWidgetItem>
+#include "pedido.h"
+
 namespace Ui {
 class VendedorWindow;
 }
@@ -14,6 +16,8 @@ class VendedorWindow : public QDialog
 public:
     explicit VendedorWindow(QWidget *parent = 0);
     ~VendedorWindow();
+    static vector<Pedido> pedidos;
+
 
 private slots:
 

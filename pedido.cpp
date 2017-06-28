@@ -4,7 +4,7 @@
 Pedido::Pedido()
 {}
 Pedido::Pedido(string nombre_solicitante, string cerro_destino,
-                 string medio_pago, deque<Cilindro> cilindro, int valor_entrega){
+                 string medio_pago, vector<Cilindro> cilindro, int valor_entrega){
     this->nombre_solicitante=nombre_solicitante;
     this->cerro_destino=cerro_destino;
     this->medio_pago=medio_pago;

@@ -9,7 +9,7 @@ Camion::Camion(string cerro_designado, int capacidad){
     this->cerro_designado=cerro_designado;
     this->enReparto=false;
 }
-void Camion::set_Pedidos(deque<Pedido> pedidos){
+void Camion::set_Pedidos(vector<Pedido> pedidos){
     this->pedidos=pedidos;
 }
 string Camion::get_Cerro(){

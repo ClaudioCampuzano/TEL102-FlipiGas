@@ -2,6 +2,8 @@
 #define CAMIONEROWINDOW_H
 
 #include <QDialog>
+#include "vendedorwindow.h"
+//#include "loginwindow.h"
 
 namespace Ui {
 class CamioneroWindow;

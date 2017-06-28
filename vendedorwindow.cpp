@@ -4,7 +4,7 @@
 #include <pedido.h>
 #include <QTableWidgetItem>
 
-deque <Pedido> pedidos;
+vector<Pedido> VendedorWindow::pedidos;
 
 VendedorWindow::VendedorWindow(QWidget *parent) :
     QDialog(parent),
@@ -41,7 +41,7 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
         respuesta = QMessageBox::question(this, "Confirmacion", "¿Esta seguro de ingresar pedido?", QMessageBox::Yes|QMessageBox::No);
         if (respuesta == QMessageBox::Yes) {
             int precio_pedido = 0;
-            deque<Cilindro> cilindros;
+            vector<Cilindro> cilindros;
             for(int i=0; i<ui->PedidosTemporales->rowCount();i++){
                 QTableWidgetItem *cnt = ui->PedidosTemporales->item(i,0);
                 QTableWidgetItem *cap = ui->PedidosTemporales->item(i,1);
