@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "vendedorwindow.h"
+#include <QCheckBox>
 //#include "loginwindow.h"
 
 namespace Ui {

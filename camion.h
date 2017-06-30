@@ -16,6 +16,7 @@ public:
     void set_Pedidos(vector<Pedido> pedidos);
     string get_Cerro();
     int get_Capacidad();
+    vector <Pedido> get_Pedidos();
 };
 
 #endif // CAMION_H

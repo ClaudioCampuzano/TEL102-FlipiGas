@@ -91,7 +91,7 @@ color: rgb(255, 255, 255);</string>
    <property name="title">
     <string>Solicitudes</string>
    </property>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="detalles_pedidos">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -102,7 +102,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <column>
      <property name="text">
-      <string>Detalles de la solicitud</string>
+      <string>¿Entregado?</string>
      </property>
      <property name="font">
       <font>
@@ -112,7 +112,7 @@ color: rgb(255, 255, 255);</string>
     </column>
     <column>
      <property name="text">
-      <string>Entregado</string>
+      <string>Detalles de la solicitud</string>
      </property>
      <property name="font">
       <font>

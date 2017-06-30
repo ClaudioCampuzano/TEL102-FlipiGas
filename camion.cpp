@@ -18,3 +18,6 @@ string Camion::get_Cerro(){
 int Camion::get_Capacidad(){
     return this->capacidad;
 }
+vector <Pedido> Camion::get_Pedidos(){
+    return this->pedidos;
+}
