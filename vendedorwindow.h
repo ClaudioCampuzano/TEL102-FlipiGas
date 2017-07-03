@@ -29,6 +29,8 @@ private slots:
 
     void on_bt_borrarSelecc_clicked();
 
+    void on_Asignar_pedidos_clicked();
+
 private:
     Ui::VendedorWindow *ui;
     int fila;

@@ -8,7 +8,7 @@ Pedido::Pedido(string nombre_solicitante, string cerro_destino,
     this->nombre_solicitante=nombre_solicitante;
     this->cerro_destino=cerro_destino;
     this->medio_pago=medio_pago;
-    this->cilindros= cilindros;
+    this->cilindros= cilindro;
     this->valor_entrega = valor_entrega;
     this->tiempo_entrega = 15 +rand()%45;
     this->entregado = false;
@@ -29,4 +29,8 @@ string Pedido::get_medio_pago(){
 
 vector<Cilindro> Pedido::get_Cilindros(){
     return this->cilindros;
+}
+
+string Pedido::get_Cerro(){
+    return this->cerro_destino;
 }

@@ -22,6 +22,7 @@ public:
     string get_Nombre_sol();
     string get_medio_pago();
     vector<Cilindro> get_Cilindros();
+    string get_Cerro();
 };
 
 #endif // PEDIDOS_H

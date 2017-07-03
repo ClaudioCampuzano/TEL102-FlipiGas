@@ -127,6 +127,11 @@ color: rgb(255, 255, 255);</string>
      </item>
      <item>
       <widget class="QComboBox" name="comboBox_cerro">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+        </font>
+       </property>
        <item>
         <property name="text">
          <string>Alegre</string>
@@ -404,7 +409,7 @@ color: rgb(255, 255, 255);</string>
      <string>Agregar a pedido</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -453,7 +458,7 @@ color: rgb(255, 255, 255);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -481,7 +486,7 @@ color: rgb(255, 255, 255);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -520,16 +525,10 @@ color: rgb(255, 255, 255);</string>
      </item>
     </layout>
    </widget>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
    <zorder>bt_agregarpedido</zorder>
-   <zorder>comboBox_tipo</zorder>
-   <zorder>comboBox_kg</zorder>
-   <zorder>spinBox_cntCilindros</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_5</zorder>
-   <zorder>label_2</zorder>
-   <zorder>comboBox_tipo</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_3</zorder>
   </widget>
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
@@ -556,7 +555,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -631,13 +630,24 @@ color: rgb(255, 255, 255);</string>
     </column>
    </widget>
   </widget>
-  <zorder>label_4</zorder>
-  <zorder>label</zorder>
-  <zorder>groupBox</zorder>
-  <zorder>groupBox_2</zorder>
-  <zorder>groupBox_3</zorder>
-  <zorder>groupBox_4</zorder>
-  <zorder>PedidosTemporales</zorder>
+  <widget class="QPushButton" name="Asignar_pedidos">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>100</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Asignar pedidos a camiones</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

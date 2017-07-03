@@ -13,7 +13,7 @@ private:
 public:
     Camion();
     Camion(string cerro_designado,int capacidad);
-    void set_Pedidos(vector<Pedido> pedidos);
+    void push_Pedido(Pedido pedido);
     string get_Cerro();
     int get_Capacidad();
     vector <Pedido> get_Pedidos();

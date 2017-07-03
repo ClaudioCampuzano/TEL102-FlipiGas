@@ -10,6 +10,7 @@
 
 #include <QMessageBox>
 #include <camion.h>
+#include "vendedorwindow.h"
 
 vector<Camion> LoginWindow::camiones;
 int LoginWindow::indice_login;
@@ -23,12 +24,14 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->lineEdit_pass->setEchoMode(QLineEdit::Password);
     Creando_Camioneros();
+
 }
 
 LoginWindow::~LoginWindow()
 {
     delete ui;
 }
+
 
 void Creando_Camioneros(){
     vector<string> cerros;

@@ -60,14 +60,6 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
             Pedido *pedid = new Pedido(nombre,cerro_destino,medio_pago,cilindros,precio_pedido);
             pedidos.push_back(*pedid);
             QMessageBox mensaje;
-/*
-            int p=0;
-            for(int i=0; i< pedidos.size();i++){
-                for(int j=0; j<((pedidos[i]).get_Cilindros()).size(); j++)
-                    p+=(((pedidos[i]).get_Cilindros())[j]).get_Cantidad();
-                QMessageBox::information(this,"Mal",QString::number(((pedidos[i]).get_Cilindros()).size()));
-            }
-*/
             mensaje.setWindowTitle(" ");
             mensaje.setText("Solicitud ingresada\n"
                            "Total a pagar $"+QString::number(precio_pedido)+"\n"

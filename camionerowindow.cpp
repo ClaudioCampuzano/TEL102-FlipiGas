@@ -44,8 +44,15 @@ CamioneroWindow::~CamioneroWindow()
 
 void CamioneroWindow::on_bt_recargar_clicked()
 {
+
     vector <Pedido> pedidos = VendedorWindow::pedidos;
     Camion camion = LoginWindow::camiones[LoginWindow::indice_login];
+
+
+    for(int i=0; i<ui->detalles_pedidos->rowCount();i++){
+        QTableWidgetItem *estado = ui->detalles_pedidos->item(i,0);
+        //bool estad = (estado->text()).toStdString();
+    }
 
 
 
