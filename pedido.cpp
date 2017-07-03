@@ -19,3 +19,14 @@ int Pedido::get_TiempoEntrega(){
 int Pedido::get_ValorEntrega(){
     return this->valor_entrega;
 }
+string Pedido::get_Nombre_sol(){
+    return this->nombre_solicitante;
+}
+
+string Pedido::get_medio_pago(){
+    return this->medio_pago;
+}
+
+vector<Cilindro> Pedido::get_Cilindros(){
+    return this->cilindros;
+}

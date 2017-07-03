@@ -19,6 +19,9 @@ public:
             vector<Cilindro> cilindros,int valor_entrega);
     int get_TiempoEntrega();
     int get_ValorEntrega();
+    string get_Nombre_sol();
+    string get_medio_pago();
+    vector<Cilindro> get_Cilindros();
 };
 
 #endif // PEDIDOS_H

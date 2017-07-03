@@ -31,3 +31,14 @@ int Cilindro::Precio(){
     }
     return 0;
 }
+int Cilindro::get_Cantidad(){
+    return this->cantidad;
+}
+
+int Cilindro::get_Capacidad(){
+    return this->capacidad;
+}
+
+string Cilindro::get_Tipo(){
+    return this->tipo;
+}
