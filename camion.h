@@ -8,6 +8,7 @@ class Camion
 private:
     bool enReparto;
     int capacidad;
+    int cilindros_restantes;
     string cerro_designado;
     vector<Pedido> pedidos;
 public:
@@ -17,6 +18,8 @@ public:
     string get_Cerro();
     int get_Capacidad();
     vector <Pedido> get_Pedidos();
+    void set_Estado();
+    void set_Restar_del_stock(int);
 };
 
 #endif // CAMION_H

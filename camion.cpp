@@ -6,6 +6,7 @@ Camion::Camion()
 }
 Camion::Camion(string cerro_designado, int capacidad){
     this->capacidad=capacidad;
+    this->cilindros_restantes = capacidad;
     this->cerro_designado=cerro_designado;
     this->enReparto=false;
 }
@@ -20,4 +21,10 @@ int Camion::get_Capacidad(){
 }
 vector <Pedido> Camion::get_Pedidos(){
     return this->pedidos;
+}
+void Camion::set_Estado(){
+    this->enReparto = false;
+}
+void Camion::set_Restar_del_stock(int cilin){
+    this->cilindros_restantes-=cilin;
 }

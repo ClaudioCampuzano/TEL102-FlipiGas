@@ -105,9 +105,11 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                     for(int j=0; j<indice_pedidos;j++){
                         if(pedidos[j].get_Asignado() == false)
                             if(LoginWindow::camiones[i].get_Cerro() == pedidos[j].get_Cerro()){
-                                QMessageBox::information(this,"so","Agregaste al de 25 en el cerro");
                                 pedidos[j].set_Asignado();
+                                LoginWindow::camiones[i].set_Estado();
+                                LoginWindow::camiones[i].set_Restar_del_stock(peso_pedidos);
                                 LoginWindow::camiones[i].push_Pedido(pedidos[j]);
+
                             }
                     }
                 else
@@ -115,17 +117,19 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                         for(int j=0; j<indice_pedidos;j++)
                             if(pedidos[j].get_Asignado() == false)
                                 if(LoginWindow::camiones[i+1].get_Cerro() == pedidos[j].get_Cerro()){
-                                    QMessageBox::information(this,"so","Agregaste al de 50 en el cerro");
                                     pedidos[j].set_Asignado();
+                                    LoginWindow::camiones[i+1].set_Estado();
+                                    LoginWindow::camiones[i+1].set_Restar_del_stock(peso_pedidos);
                                     LoginWindow::camiones[i+1].push_Pedido(pedidos[j]);
                                 }
-                    }
+                        }
                     else
                         for(int j=0; j<indice_pedidos;j++){
                             if(pedidos[j].get_Asignado() == false)
                                 if(LoginWindow::camiones[i+2].get_Cerro() == pedidos[j].get_Cerro()){
-                                    QMessageBox::information(this,"so","Agregaste al de 100 en el cerro");
                                     pedidos[j].set_Asignado();
+                                    LoginWindow::camiones[i+2].set_Estado();
+                                    LoginWindow::camiones[i+2].set_Restar_del_stock(peso_pedidos);
                                     LoginWindow::camiones[i+2].push_Pedido(pedidos[j]);
                             }
                         }

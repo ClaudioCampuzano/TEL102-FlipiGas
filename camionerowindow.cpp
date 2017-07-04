@@ -34,6 +34,7 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
         QString final = "Nombre: " + nombre + Detalle_cilindros;
         ui->detalles_pedidos->setCellWidget(0,0,confirmacion);
         ui->detalles_pedidos->setItem(0,1,new QTableWidgetItem(final));
+
     }
 }
 
@@ -50,7 +51,7 @@ void CamioneroWindow::on_bt_recargar_clicked()
 
 
     for(int i=0; i<ui->detalles_pedidos->rowCount();i++){
-        QTableWidgetItem *estado = ui->detalles_pedidos->item(i,0);
+        //QTableWidgetItem *estado = ui->detalles_pedidos->item(i,0);
         //bool estad = (estado->text()).toStdString();
     }
 
