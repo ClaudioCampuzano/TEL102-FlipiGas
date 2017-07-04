@@ -13,6 +13,7 @@ private:
     int valor_entrega;
     vector<Cilindro> cilindros;
     bool entregado;
+    bool asignado;
 public:
     Pedido();
     Pedido(string nombre_solicitante,string cerro_destino,string medio_pago,
@@ -23,6 +24,9 @@ public:
     string get_medio_pago();
     vector<Cilindro> get_Cilindros();
     string get_Cerro();
+    bool get_Entregado();
+    bool get_Asignado();
+    void set_Asignado();
 };
 
 #endif // PEDIDOS_H

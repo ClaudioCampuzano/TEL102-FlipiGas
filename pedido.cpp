@@ -12,6 +12,7 @@ Pedido::Pedido(string nombre_solicitante, string cerro_destino,
     this->valor_entrega = valor_entrega;
     this->tiempo_entrega = 15 +rand()%45;
     this->entregado = false;
+    this->asignado = false;
 }
 int Pedido::get_TiempoEntrega(){
     return this->tiempo_entrega;
@@ -33,4 +34,16 @@ vector<Cilindro> Pedido::get_Cilindros(){
 
 string Pedido::get_Cerro(){
     return this->cerro_destino;
+}
+
+bool Pedido::get_Entregado(){
+    return this->entregado;
+}
+
+bool Pedido::get_Asignado(){
+    return this->asignado;
+}
+
+void Pedido::set_Asignado(){
+    this->asignado = true;
 }

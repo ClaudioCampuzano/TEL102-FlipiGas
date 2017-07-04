@@ -20,6 +20,7 @@ public:
     ~LoginWindow();
     static vector<Camion> camiones;
     static int indice_login;
+    static vector<string> cerros;
 private slots:
     void on_pushButton_Login_clicked();
 

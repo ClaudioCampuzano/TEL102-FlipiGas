@@ -14,6 +14,7 @@
 
 vector<Camion> LoginWindow::camiones;
 int LoginWindow::indice_login;
+vector<string> LoginWindow::cerros;
 
 void Creando_Camioneros();
 
@@ -34,24 +35,23 @@ LoginWindow::~LoginWindow()
 
 
 void Creando_Camioneros(){
-    vector<string> cerros;
-    cerros.push_back("Alegre");cerros.push_back("Barón");cerros.push_back("Blanco");
-    cerros.push_back("Bellavista");cerros.push_back("Concepción");cerros.push_back("Cordillera");
-    cerros.push_back("Delicias");cerros.push_back("El Litre");cerros.push_back("El Molino");
-    cerros.push_back("Esperanza");cerros.push_back("Jiménez");cerros.push_back("Larraín");
-    cerros.push_back("La Cruz");cerros.push_back("La Cárcel");cerros.push_back("La Florida");
-    cerros.push_back("La Merced");cerros.push_back("La Virgen");cerros.push_back("Las Cañas");
-    cerros.push_back("Las Jarcias");cerros.push_back("Las Monjas");cerros.push_back("Los Placeres");
-    cerros.push_back("Loceras");cerros.push_back("Lecheros");cerros.push_back("Mariposas");
-    cerros.push_back("Mesilla");cerros.push_back("Miraflores");cerros.push_back("O'Higgins");
-    cerros.push_back("Pajonal");cerros.push_back("Panteón");cerros.push_back("Playa Ancha");
-    cerros.push_back("Perdices");cerros.push_back("Polanco");cerros.push_back("Ramaditas");
-    cerros.push_back("San Juan de Dios");cerros.push_back("Santo Domingo");cerros.push_back("San Francisco");
-    cerros.push_back("Toro");cerros.push_back("Yungay");
-    for(int i =0; i < cerros.size(); i++){
-        Camion *cami = new Camion(cerros[i],25);
-        Camion *cami1 = new Camion(cerros[i],50);
-        Camion *cami2 = new Camion(cerros[i],100);
+    LoginWindow::cerros.push_back("Alegre");LoginWindow::cerros.push_back("Barón");LoginWindow::cerros.push_back("Blanco");
+    LoginWindow::cerros.push_back("Bellavista");LoginWindow::cerros.push_back("Concepción");LoginWindow::cerros.push_back("Cordillera");
+    LoginWindow::cerros.push_back("Delicias");LoginWindow::cerros.push_back("El Litre");LoginWindow::cerros.push_back("El Molino");
+    LoginWindow::cerros.push_back("Esperanza");LoginWindow::cerros.push_back("Jiménez");LoginWindow::cerros.push_back("Larraín");
+    LoginWindow::cerros.push_back("La Cruz");LoginWindow::cerros.push_back("La Cárcel");LoginWindow::cerros.push_back("La Florida");
+    LoginWindow::cerros.push_back("La Merced");LoginWindow::cerros.push_back("La Virgen");LoginWindow::cerros.push_back("Las Cañas");
+    LoginWindow::cerros.push_back("Las Jarcias");LoginWindow::cerros.push_back("Las Monjas");LoginWindow::cerros.push_back("Los Placeres");
+    LoginWindow::cerros.push_back("Loceras");LoginWindow::cerros.push_back("Lecheros");LoginWindow::cerros.push_back("Mariposas");
+    LoginWindow::cerros.push_back("Mesilla");LoginWindow::cerros.push_back("Miraflores");LoginWindow::cerros.push_back("O'Higgins");
+    LoginWindow::cerros.push_back("Pajonal");LoginWindow::cerros.push_back("Panteón");LoginWindow::cerros.push_back("Playa Ancha");
+    LoginWindow::cerros.push_back("Perdices");LoginWindow::cerros.push_back("Polanco");LoginWindow::cerros.push_back("Ramaditas");
+    LoginWindow::cerros.push_back("San Juan de Dios");LoginWindow::cerros.push_back("Santo Domingo");LoginWindow::cerros.push_back("San Francisco");
+    LoginWindow::cerros.push_back("Toro");LoginWindow::cerros.push_back("Yungay");
+    for(int i =0; i < LoginWindow::cerros.size(); i++){
+        Camion *cami = new Camion(LoginWindow::cerros[i],25);
+        Camion *cami1 = new Camion(LoginWindow::cerros[i],50);
+        Camion *cami2 = new Camion(LoginWindow::cerros[i],100);
 
         LoginWindow::camiones.push_back(*cami);
         LoginWindow::camiones.push_back(*cami1);

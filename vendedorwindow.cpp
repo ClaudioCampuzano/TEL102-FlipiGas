@@ -60,14 +60,6 @@ void VendedorWindow::on_bt_ingresarpedido_clicked()
             Pedido *pedid = new Pedido(nombre,cerro_destino,medio_pago,cilindros,precio_pedido);
             pedidos.push_back(*pedid);
             QMessageBox mensaje;
-/*
-            int p=0;
-            for(int i=0; i< pedidos.size();i++){
-                for(int j=0; j<((pedidos[i]).get_Cilindros()).size(); j++)
-                    p+=(((pedidos[i]).get_Cilindros())[j]).get_Cantidad();
-                QMessageBox::information(this,"Mal",QString::number(((pedidos[i]).get_Cilindros()).size()));
-            }
-*/
             mensaje.setWindowTitle(" ");
             mensaje.setText("Solicitud ingresada\n"
                            "Total a pagar $"+QString::number(precio_pedido)+"\n"
@@ -94,25 +86,51 @@ void VendedorWindow::on_bt_borrarSelecc_clicked()
 void VendedorWindow::on_Asignar_pedidos_clicked()
 {
     if(pedidos.size()>0){
-        int peso_pedidos=0;
-        for(int j=0; j<pedidos.size(); j++){
-            for(int k=0; k< pedidos[j].get_Cilindros().size();k++)
-                    peso_pedidos+=pedidos[j].get_Cilindros()[k].get_Cantidad();
-            QMessageBox::information(this,"Mal",QString::number(peso_pedidos));
-            peso_pedidos=0;
-         }
-
-        /*
-        for (int i =0; i< LoginWindow::camiones.size() ;i++){
-            for(int j=0; j<pedidos.size(); j++){
-                if (LoginWindow::camiones[i].get_Cerro() == pedidos[j].get_Cerro()){
-                    for(int k=0; k< pedidos[j].get_Cilindros().size();k++)
-                        peso_pedidos+=pedidos[j].get_Cilindros()[k].get_Cantidad();
-                    LoginWindow::camiones[i].push_Pedido(pedidos[j]);
-                }
+        for(int i=0; i<LoginWindow::camiones.size(); i+=3){
+            int peso_pedidos=0;
+            int indice_pedidos=-1;
+            for(int j=0; j<pedidos.size();j++){
+                if(pedidos[j].get_Asignado() == false)
+                    if(LoginWindow::camiones[i].get_Cerro() == pedidos[j].get_Cerro())
+                        for(int k=0; k< pedidos[j].get_Cilindros().size();k++)
+                            peso_pedidos+= pedidos[j].get_Cilindros()[k].get_Cantidad();
+                if(peso_pedidos>100){
+                    indice_pedidos = j-1;
+                    break;
+                }else
+                    indice_pedidos=j+1;
             }
-        }*/
+            if (indice_pedidos != -1){
+                if (peso_pedidos<=25)
+                    for(int j=0; j<indice_pedidos;j++){
+                        if(pedidos[j].get_Asignado() == false)
+                            if(LoginWindow::camiones[i].get_Cerro() == pedidos[j].get_Cerro()){
+                                QMessageBox::information(this,"so","Agregaste al de 25 en el cerro");
+                                pedidos[j].set_Asignado();
+                                LoginWindow::camiones[i].push_Pedido(pedidos[j]);
+                            }
+                    }
+                else
+                    if (peso_pedidos>25 && peso_pedidos<=50){
+                        for(int j=0; j<indice_pedidos;j++)
+                            if(pedidos[j].get_Asignado() == false)
+                                if(LoginWindow::camiones[i+1].get_Cerro() == pedidos[j].get_Cerro()){
+                                    QMessageBox::information(this,"so","Agregaste al de 50 en el cerro");
+                                    pedidos[j].set_Asignado();
+                                    LoginWindow::camiones[i+1].push_Pedido(pedidos[j]);
+                                }
+                    }
+                    else
+                        for(int j=0; j<indice_pedidos;j++){
+                            if(pedidos[j].get_Asignado() == false)
+                                if(LoginWindow::camiones[i+2].get_Cerro() == pedidos[j].get_Cerro()){
+                                    QMessageBox::information(this,"so","Agregaste al de 100 en el cerro");
+                                    pedidos[j].set_Asignado();
+                                    LoginWindow::camiones[i+2].push_Pedido(pedidos[j]);
+                            }
+                        }
+            }
+        }
     }else
         QMessageBox::information(this,"Mal","No hay pedidos que asignar");
-
 }
