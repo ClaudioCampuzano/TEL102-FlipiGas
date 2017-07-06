@@ -31,3 +31,6 @@ bool Camion::get_Estado(){
 int Camion::get_CilindrosRestantes(){
     return this->cilindros_restantes;
 }
+void Camion::set_Estado(bool estado){
+    this->enReparto = estado;
+}

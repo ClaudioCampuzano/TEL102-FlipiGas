@@ -21,6 +21,7 @@ public:
     bool get_Estado();
     int get_CilindrosRestantes();
     void set_Restar_del_stock(int);
+    void set_Estado(bool);
 };
 
 #endif // CAMION_H

@@ -141,6 +141,9 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                     }
                 }
         }
+        for(int i=0; i<LoginWindow::camiones.size(); i++)
+            if (LoginWindow::camiones[i].get_CilindrosRestantes() != LoginWindow::camiones[i].get_Capacidad())
+                LoginWindow::camiones[i].set_Estado(true);
     }else
         QMessageBox::information(this,"Mal","No hay pedidos que asignar");
 }
