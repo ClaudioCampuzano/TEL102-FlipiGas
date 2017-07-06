@@ -18,7 +18,8 @@ public:
     string get_Cerro();
     int get_Capacidad();
     vector <Pedido> get_Pedidos();
-    void set_Estado();
+    bool get_Estado();
+    int get_CilindrosRestantes();
     void set_Restar_del_stock(int);
 };
 

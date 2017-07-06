@@ -100,40 +100,37 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                 }else
                     indice_pedidos=j+1;
             }
-            if (indice_pedidos != -1){
-                if (peso_pedidos<=25)
-                    for(int j=0; j<indice_pedidos;j++){
-                        if(pedidos[j].get_Asignado() == false)
+            if (indice_pedidos != -1)
+                for(int j=0; j<indice_pedidos;j++){
+                    int num_cilin=0;
+                    for(int k=0; k< pedidos[j].get_Cilindros().size();k++)
+                        num_cilin+= pedidos[j].get_Cilindros()[k].get_Cantidad();
+                    if(pedidos[j].get_Asignado() == false){
+                        if ((peso_pedidos<=25)&(LoginWindow::camiones[i].get_CilindrosRestantes()-num_cilin>=0)&
+                                (LoginWindow::camiones[i].get_Estado()==false)){
                             if(LoginWindow::camiones[i].get_Cerro() == pedidos[j].get_Cerro()){
                                 pedidos[j].set_Asignado();
-                                LoginWindow::camiones[i].set_Estado();
-                                LoginWindow::camiones[i].set_Restar_del_stock(peso_pedidos);
+                                LoginWindow::camiones[i].set_Restar_del_stock(num_cilin);
                                 LoginWindow::camiones[i].push_Pedido(pedidos[j]);
-
-                            }
-                    }
-                else
-                    if (peso_pedidos>25 && peso_pedidos<=50){
-                        for(int j=0; j<indice_pedidos;j++)
+                                }
+                        }else if ((peso_pedidos<=50)&(LoginWindow::camiones[i+1].get_CilindrosRestantes()-num_cilin>=0)&
+                                  (LoginWindow::camiones[i+2].get_Estado()==false)){
                             if(pedidos[j].get_Asignado() == false)
                                 if(LoginWindow::camiones[i+1].get_Cerro() == pedidos[j].get_Cerro()){
                                     pedidos[j].set_Asignado();
-                                    LoginWindow::camiones[i+1].set_Estado();
-                                    LoginWindow::camiones[i+1].set_Restar_del_stock(peso_pedidos);
+                                    LoginWindow::camiones[i+1].set_Restar_del_stock(num_cilin);
                                     LoginWindow::camiones[i+1].push_Pedido(pedidos[j]);
                                 }
-                        }
-                    else
-                        for(int j=0; j<indice_pedidos;j++){
+                        }else if ((LoginWindow::camiones[i+2].get_CilindrosRestantes()-num_cilin>=0)&
+                                  (LoginWindow::camiones[i].get_Estado()==false))
                             if(pedidos[j].get_Asignado() == false)
                                 if(LoginWindow::camiones[i+2].get_Cerro() == pedidos[j].get_Cerro()){
                                     pedidos[j].set_Asignado();
-                                    LoginWindow::camiones[i+2].set_Estado();
-                                    LoginWindow::camiones[i+2].set_Restar_del_stock(peso_pedidos);
+                                    LoginWindow::camiones[i+2].set_Restar_del_stock(num_cilin);
                                     LoginWindow::camiones[i+2].push_Pedido(pedidos[j]);
-                            }
-                        }
-            }
+                                }
+                    }
+                }
         }
     }else
         QMessageBox::information(this,"Mal","No hay pedidos que asignar");

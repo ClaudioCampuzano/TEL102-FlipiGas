@@ -22,9 +22,12 @@ int Camion::get_Capacidad(){
 vector <Pedido> Camion::get_Pedidos(){
     return this->pedidos;
 }
-void Camion::set_Estado(){
-    this->enReparto = false;
-}
 void Camion::set_Restar_del_stock(int cilin){
     this->cilindros_restantes-=cilin;
+}
+bool Camion::get_Estado(){
+    return this->enReparto;
+}
+int Camion::get_CilindrosRestantes(){
+    return this->cilindros_restantes;
 }
