@@ -21,22 +21,26 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
     ui->Nombrecerrocamion->setText(cerro);
     ui->capacidadcamion->setText(capacidad +" Cilindros");
     ui->cilindros_restantes->setText(cilin_disponibles+ " Cilindros");
+    if (camion.get_Estado() == true)
+        ui->Estado->setText("En reparto");
+    else
+        ui->Estado->setText("Disponible para pedido");
     vector <Pedido> pedidos_camion = camion.get_Pedidos();
     QCheckBox *confirmacion = new QCheckBox("¿Si?");
-    ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
     for(int i=0; i<pedidos_camion.size(); i++){
-        QString nombre = QString::fromStdString(pedidos_camion[i].get_Nombre_sol())+ ";";
+        QString nombre = QString::fromStdString(pedidos_camion[i].get_Nombre_sol())+ ", ";
+        QString medio_pago = QString::fromStdString(pedidos_camion[i].get_medio_pago())+ ", ";
         QString Detalle_cilindros = "";
         for(int j=0; j<pedidos_camion[i].get_Cilindros().size(); j++){
             int cnt = pedidos_camion[i].get_Cilindros()[j].get_Cantidad();
             int cap = pedidos_camion[i].get_Cilindros()[j].get_Capacidad();
             QString tipo = QString::fromStdString(pedidos_camion[i].get_Cilindros()[j].get_Tipo());
-            Detalle_cilindros+= cnt + " cilindros " + tipo + " " + cap + " kg;";
+            Detalle_cilindros+= QString::number(cnt) + " Cilindro(s) " + tipo + "(s) de " + QString::number(cap) + " kg; ";
         }
-        QString final = "Nombre: " + nombre + Detalle_cilindros;
-        ui->detalles_pedidos->setCellWidget(0,0,confirmacion);
-        ui->detalles_pedidos->setItem(0,1,new QTableWidgetItem(final));
-
+        QString final = "Nombre: " + nombre + "Pago: " + medio_pago + "Pedido: " + Detalle_cilindros;
+        ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
+        ui->detalles_pedidos->setCellWidget(i,0,confirmacion);
+        ui->detalles_pedidos->setItem(i,1,new QTableWidgetItem(final));
     }
 }
 
@@ -50,11 +54,12 @@ void CamioneroWindow::on_bt_recargar_clicked()
 
     vector <Pedido> pedidos = VendedorWindow::pedidos;
     Camion camion = LoginWindow::camiones[LoginWindow::indice_login];
-
-
     for(int i=0; i<ui->detalles_pedidos->rowCount();i++){
-        //QTableWidgetItem *estado = ui->detalles_pedidos->item(i,0);
-        //bool estad = (estado->text()).toStdString();
+        QTableWidgetItem *estado = ui->detalles_pedidos->item(i,0);
+        if (estado->checkState())
+            QMessageBox::information(this,"Ok","bien");
+
+
     }
 
 

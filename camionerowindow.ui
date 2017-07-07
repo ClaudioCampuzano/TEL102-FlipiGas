@@ -83,9 +83,9 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>230</y>
+     <y>260</y>
      <width>491</width>
-     <height>171</height>
+     <height>141</height>
     </rect>
    </property>
    <property name="title">
@@ -97,7 +97,7 @@ color: rgb(255, 255, 255);</string>
       <x>10</x>
       <y>20</y>
       <width>461</width>
-      <height>141</height>
+      <height>111</height>
      </rect>
     </property>
     <column>
@@ -128,7 +128,7 @@ color: rgb(255, 255, 255);</string>
      <x>50</x>
      <y>130</y>
      <width>331</width>
-     <height>101</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="title">
@@ -138,14 +138,14 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>307</width>
-      <height>71</height>
+      <y>22</y>
+      <width>303</width>
+      <height>96</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <widget class="QLabel" name="label_2">
          <property name="font">
@@ -175,6 +175,36 @@ color: rgb(255, 255, 255);</string>
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Estado del camion:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Estado">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Estado</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QLabel" name="label_3">
@@ -185,7 +215,7 @@ color: rgb(255, 255, 255);</string>
           </font>
          </property>
          <property name="text">
-          <string>Capacidad total del camion:</string>
+          <string>Capacidad total:</string>
          </property>
         </widget>
        </item>
@@ -205,7 +235,7 @@ color: rgb(255, 255, 255);</string>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLabel" name="label_5">
          <property name="font">
@@ -241,6 +271,34 @@ color: rgb(255, 255, 255);</string>
    <zorder>layoutWidget</zorder>
    <zorder>label_5</zorder>
    <zorder>cilindros_restantes</zorder>
+   <zorder>label_5</zorder>
+   <zorder>layoutWidget_2</zorder>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>140</y>
+     <width>591</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>UpArrowCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(61, 61, 61);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>                                  &quot;Menu Camionero&quot;</string>
+   </property>
   </widget>
  </widget>
  <resources/>

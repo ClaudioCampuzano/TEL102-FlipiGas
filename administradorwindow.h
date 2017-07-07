@@ -2,6 +2,9 @@
 #define ADMINISTRADORWINDOW_H
 
 #include <QDialog>
+#include "admincamioneswindow.h"
+#include "adminventascruzadaswindow.h"
+#include "admininventariowindow.h"
 
 namespace Ui {
 class AdministradorWindow;
@@ -25,8 +28,13 @@ private slots:
 
 
 
+    void on_bt_inventario_clicked();
+
 private:
     Ui::AdministradorWindow *ui;
+    AdminCamionesWindow *adminCamionesWindow;
+    AdminVentasCruzadasWindow *adminVentasCruzadasWindow;
+    AdminInventarioWindow *adminInventarioWindow;
 };
 
 #endif // ADMINISTRADORWINDOW_H

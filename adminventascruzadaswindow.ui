@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AdministradorWindow</class>
- <widget class="QDialog" name="AdministradorWindow">
+ <class>AdminVentasCruzadasWindow</class>
+ <widget class="QDialog" name="AdminVentasCruzadasWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>521</width>
-    <height>391</height>
+    <width>520</width>
+    <height>407</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,56 +42,23 @@ color: rgb(255, 255, 255);</string>
     <string>                         &quot;Menu Administrador&quot;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="bt_solicitudes">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>130</y>
-     <width>91</width>
+     <x>20</x>
+     <y>100</y>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Ver Solicitudes</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="bt_camiones">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>190</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
-    <string>Ver Camiones</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="bt_ventaybodega">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>250</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Venta y Bodega</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="bt_inventario">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>310</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Inventario</string>
+    <string>&gt;Venta Cruzadas</string>
    </property>
   </widget>
  </widget>

@@ -15,6 +15,9 @@
 vector<Camion> LoginWindow::camiones;
 int LoginWindow::indice_login;
 vector<string> LoginWindow::cerros;
+int LoginWindow::capCilindroPlanta;
+int LoginWindow::cilidrosRestantes;
+
 
 void Creando_Camioneros();
 
@@ -25,7 +28,8 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->lineEdit_pass->setEchoMode(QLineEdit::Password);
     Creando_Camioneros();
-
+    capCilindroPlanta = 5000;
+    cilidrosRestantes = 5000;
 }
 
 LoginWindow::~LoginWindow()

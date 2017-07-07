@@ -21,6 +21,8 @@ public:
     static vector<Camion> camiones;
     static int indice_login;
     static vector<string> cerros;
+    static int capCilindroPlanta;
+    static int cilidrosRestantes;
 private slots:
     void on_pushButton_Login_clicked();
 
