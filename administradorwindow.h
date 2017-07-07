@@ -5,6 +5,7 @@
 #include "admincamioneswindow.h"
 #include "adminventascruzadaswindow.h"
 #include "admininventariowindow.h"
+#include "adminsolicitudeswindow.h"
 
 namespace Ui {
 class AdministradorWindow;
@@ -35,6 +36,7 @@ private:
     AdminCamionesWindow *adminCamionesWindow;
     AdminVentasCruzadasWindow *adminVentasCruzadasWindow;
     AdminInventarioWindow *adminInventarioWindow;
+    AdminSolicitudesWindow *adminSolicitudesWindow;
 };
 
 #endif // ADMINISTRADORWINDOW_H

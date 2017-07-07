@@ -15,6 +15,8 @@ AdministradorWindow::~AdministradorWindow()
 
 void AdministradorWindow::on_bt_solicitudes_clicked()
 {
+    adminSolicitudesWindow = new AdminSolicitudesWindow(this);
+    adminSolicitudesWindow->show();
 }
 
 void AdministradorWindow::on_bt_camiones_clicked()

@@ -34,7 +34,8 @@ SOURCES += \
     pedido.cpp \
     admincamioneswindow.cpp \
     adminventascruzadaswindow.cpp \
-    admininventariowindow.cpp
+    admininventariowindow.cpp \
+    adminsolicitudeswindow.cpp
 
 HEADERS += \
         loginwindow.h \
@@ -46,7 +47,8 @@ HEADERS += \
     pedido.h \
     admincamioneswindow.h \
     adminventascruzadaswindow.h \
-    admininventariowindow.h
+    admininventariowindow.h \
+    adminsolicitudeswindow.h
 
 FORMS += \
         loginwindow.ui \
@@ -55,4 +57,5 @@ FORMS += \
     camionerowindow.ui \
     admincamioneswindow.ui \
     adminventascruzadaswindow.ui \
-    admininventariowindow.ui
+    admininventariowindow.ui \
+    adminsolicitudeswindow.ui
