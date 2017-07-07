@@ -1,6 +1,7 @@
 #include "admincamioneswindow.h"
 #include "ui_admincamioneswindow.h"
 #include "loginwindow.h"
+#include <QPushButton>
 
 AdminCamionesWindow::AdminCamionesWindow(QWidget *parent) :
     QDialog(parent),
@@ -21,7 +22,10 @@ AdminCamionesWindow::AdminCamionesWindow(QWidget *parent) :
                 + QString::number(LoginWindow::camiones[i].get_Capacidad())
                 +" cilindros";
         ui->Camiones->setItem(i,1,new QTableWidgetItem(detalle_camion));
-        QPushButton *qPushButton;
+
+        QPushButton *qPushButton = new QPushButton();;
+        qPushButton->setText("Propiedades");
+        ui->Camiones->setCellWidget(i,2,(QWidget*)qPushButton);
     }
 }
 

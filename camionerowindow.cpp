@@ -26,8 +26,8 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
     else
         ui->Estado->setText("Disponible para pedido");
     vector <Pedido> pedidos_camion = camion.get_Pedidos();
-    QCheckBox *confirmacion = new QCheckBox("¿Si?");
     for(int i=0; i<pedidos_camion.size(); i++){
+        ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
         QString nombre = QString::fromStdString(pedidos_camion[i].get_Nombre_sol())+ ", ";
         QString medio_pago = QString::fromStdString(pedidos_camion[i].get_medio_pago())+ ", ";
         QString Detalle_cilindros = "";
@@ -38,9 +38,10 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
             Detalle_cilindros+= QString::number(cnt) + " Cilindro(s) " + tipo + "(s) de " + QString::number(cap) + " kg; ";
         }
         QString final = "Nombre: " + nombre + "Pago: " + medio_pago + "Pedido: " + Detalle_cilindros;
-        ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
-        ui->detalles_pedidos->setCellWidget(i,0,confirmacion);
         ui->detalles_pedidos->setItem(i,1,new QTableWidgetItem(final));
+        QCheckBox *confirmacion = new QCheckBox("¿Si?");
+        ui->detalles_pedidos->setCellWidget(i,0,(QWidget*)confirmacion);
+
     }
 }
 

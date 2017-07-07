@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>405</height>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -85,7 +85,7 @@ color: rgb(255, 255, 255);</string>
      <x>50</x>
      <y>260</y>
      <width>491</width>
-     <height>141</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="title">
@@ -97,7 +97,7 @@ color: rgb(255, 255, 255);</string>
       <x>10</x>
       <y>20</y>
       <width>461</width>
-      <height>111</height>
+      <height>131</height>
      </rect>
     </property>
     <column>
@@ -134,7 +134,7 @@ color: rgb(255, 255, 255);</string>
    <property name="title">
     <string>Info camion</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -266,39 +266,6 @@ color: rgb(255, 255, 255);</string>
      </item>
     </layout>
    </widget>
-   <zorder>Nombrecerrocamion</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>label_5</zorder>
-   <zorder>cilindros_restantes</zorder>
-   <zorder>label_5</zorder>
-   <zorder>layoutWidget_2</zorder>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>140</y>
-     <width>591</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="cursor">
-    <cursorShape>UpArrowCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(61, 61, 61);
-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>                                  &quot;Menu Camionero&quot;</string>
-   </property>
   </widget>
  </widget>
  <resources/>
