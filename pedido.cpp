@@ -10,7 +10,7 @@ Pedido::Pedido(string nombre_solicitante, string cerro_destino,
     this->medio_pago=medio_pago;
     this->cilindros= cilindro;
     this->valor_entrega = valor_entrega;
-    this->tiempo_entrega = 15 +rand()%45;
+    this->tiempo_entrega = 2 +rand()%9;
     this->entregado = false;
     this->asignado = false;
 }

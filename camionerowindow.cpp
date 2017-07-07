@@ -17,8 +17,10 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
     Camion camion = LoginWindow::camiones[LoginWindow::indice_login];
     QString cerro = QString::fromStdString(camion.get_Cerro());
     QString capacidad = QString::number(camion.get_Capacidad());
+    QString cilin_disponibles = QString::number(camion.get_CilindrosRestantes());
     ui->Nombrecerrocamion->setText(cerro);
-    ui->capacidadcamion->setText(capacidad +" cilindros");
+    ui->capacidadcamion->setText(capacidad +" Cilindros");
+    ui->cilindros_restantes->setText(cilin_disponibles+ " Cilindros");
     vector <Pedido> pedidos_camion = camion.get_Pedidos();
     QCheckBox *confirmacion = new QCheckBox("¿Si?");
     ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
