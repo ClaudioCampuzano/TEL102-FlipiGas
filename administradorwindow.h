@@ -4,7 +4,6 @@
 #include <QDialog>
 #include "admincamioneswindow.h"
 #include "adminventascruzadaswindow.h"
-#include "admininventariowindow.h"
 #include "adminsolicitudeswindow.h"
 
 namespace Ui {
@@ -35,7 +34,6 @@ private:
     Ui::AdministradorWindow *ui;
     AdminCamionesWindow *adminCamionesWindow;
     AdminVentasCruzadasWindow *adminVentasCruzadasWindow;
-    AdminInventarioWindow *adminInventarioWindow;
     AdminSolicitudesWindow *adminSolicitudesWindow;
 };
 

@@ -81,19 +81,6 @@ color: rgb(255, 255, 255);</string>
     <string>Venta y Bodega</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="bt_inventario">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>310</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Inventario</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

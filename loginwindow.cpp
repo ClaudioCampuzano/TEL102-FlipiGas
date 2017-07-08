@@ -3,6 +3,7 @@
  * Administrador {User: Administrador, Pass: Holamundo}
  * Camionero (existiran 3 tipos de camiones de 25, 50 y 100 cilindros
  * {User: tipo_Cerro, Pass: Cerro} donde Cerro, correspondera a uno de los cerros de valparaiso.
+ * Bodeguero {User: Bodeguero, Pass: bodeguero123
  */
 
 #include "loginwindow.h"
@@ -15,8 +16,15 @@
 vector<Camion> LoginWindow::camiones;
 int LoginWindow::indice_login;
 vector<string> LoginWindow::cerros;
-int LoginWindow::capCilindroPlanta;
-int LoginWindow::cilidrosRestantes;
+int LoginWindow::CincokgCatalico;
+int LoginWindow::OncekgCatalico;
+int LoginWindow::QuincekgCatalico;
+int LoginWindow::CuarentaYCincokgCatalico;
+int LoginWindow::CincokgNoCatalico;
+int LoginWindow::OncekgNoCatalico;
+int LoginWindow::QuincekgNoCatalico;
+int LoginWindow::CuarentaYCincokgNoCatalico;
+int LoginWindow::total_ventas;
 
 
 void Creando_Camioneros();
@@ -28,8 +36,15 @@ LoginWindow::LoginWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->lineEdit_pass->setEchoMode(QLineEdit::Password);
     Creando_Camioneros();
-    capCilindroPlanta = 5000;
-    cilidrosRestantes = 5000;
+    CincokgCatalico = 300;
+    OncekgCatalico= 250;
+    QuincekgCatalico= 200;
+    CuarentaYCincokgCatalico = 150;
+    CincokgNoCatalico= 150;
+    OncekgNoCatalico = 140;
+    QuincekgNoCatalico = 120;
+    CuarentaYCincokgNoCatalico= 100;
+    total_ventas=0;
 }
 
 LoginWindow::~LoginWindow()
@@ -91,6 +106,9 @@ void LoginWindow::on_pushButton_Login_clicked(){
     }else if (usuario == "Administrador" && contrasena == "Holamundo"){
         administrador= new AdministradorWindow(this);
         administrador->show();
+    }else if (usuario == "Bodeguero" && contrasena == "bodeguero123"){
+        adminInventarioWindow = new AdminInventarioWindow(this);
+        adminInventarioWindow->show();
     }else
         QMessageBox::warning(this,"Login","Nombre de usuario o contraseña incorrectos");
 }

@@ -27,6 +27,7 @@ AdminCamionesWindow::AdminCamionesWindow(QWidget *parent) :
         qPushButton->setText("Propiedades");
         ui->Camiones->setCellWidget(i,2,(QWidget*)qPushButton);
     }
+
 }
 
 AdminCamionesWindow::~AdminCamionesWindow()

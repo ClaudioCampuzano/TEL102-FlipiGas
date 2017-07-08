@@ -121,7 +121,6 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                                     pedidos[j].set_Asignado();
                                     LoginWindow::camiones[i].set_Restar_del_stock(num_cilin);
                                     LoginWindow::camiones[i].push_Pedido(pedidos[j]);
-                                    LoginWindow::cilidrosRestantes -= num_cilin;
                                     QMessageBox::information(this,"Solido","Pedido ingresado al camion de 25");
                                     }
                             }else if ((peso_pedidos<=50)&(LoginWindow::camiones[i+1].get_CilindrosRestantes()-num_cilin>=0)&
@@ -131,7 +130,6 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                                         pedidos[j].set_Asignado();
                                         LoginWindow::camiones[i+1].set_Restar_del_stock(num_cilin);
                                         LoginWindow::camiones[i+1].push_Pedido(pedidos[j]);
-                                        LoginWindow::cilidrosRestantes -= num_cilin;
                                         QMessageBox::information(this,"Solido","Pedido ingresado al camion de 50");
                                     }
                             }else if ((LoginWindow::camiones[i+2].get_CilindrosRestantes()-num_cilin>=0)&
@@ -141,7 +139,6 @@ void VendedorWindow::on_Asignar_pedidos_clicked()
                                         pedidos[j].set_Asignado();
                                         LoginWindow::camiones[i+2].set_Restar_del_stock(num_cilin);
                                         LoginWindow::camiones[i+2].push_Pedido(pedidos[j]);
-                                        LoginWindow::cilidrosRestantes -= num_cilin;
                                         QMessageBox::information(this,"Solido","Pedido ingresado al camion de 100");
                                     }
                         }

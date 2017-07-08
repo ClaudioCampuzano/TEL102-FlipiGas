@@ -33,6 +33,5 @@ void AdministradorWindow::on_bt_ventaybodega_clicked()
 
 void AdministradorWindow::on_bt_inventario_clicked()
 {
-    adminInventarioWindow = new AdminInventarioWindow(this);
-    adminInventarioWindow->show();
+
 }
