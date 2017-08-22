@@ -8,7 +8,6 @@ AdminInventarioWindow::AdminInventarioWindow(QWidget *parent) :
     ui(new Ui::AdminInventarioWindow)
 {
     ui->setupUi(this);
-
     ui->detalle->setItem(0,0,new QTableWidgetItem(QString::number(LoginWindow::CincokgCatalico)));
     ui->detalle->setItem(1,0,new QTableWidgetItem(QString::number(LoginWindow::OncekgCatalico)));
     ui->detalle->setItem(2,0,new QTableWidgetItem(QString::number(LoginWindow::QuincekgCatalico)));
@@ -17,7 +16,6 @@ AdminInventarioWindow::AdminInventarioWindow(QWidget *parent) :
     ui->detalle->setItem(1,1,new QTableWidgetItem(QString::number(LoginWindow::OncekgNoCatalico)));
     ui->detalle->setItem(2,1,new QTableWidgetItem(QString::number(LoginWindow::QuincekgNoCatalico)));
     ui->detalle->setItem(3,1,new QTableWidgetItem(QString::number(LoginWindow::CuarentaYCincokgNoCatalico)));
-
 }
 
 AdminInventarioWindow::~AdminInventarioWindow()
