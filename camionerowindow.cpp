@@ -18,13 +18,13 @@ CamioneroWindow::CamioneroWindow(QWidget *parent) :
     QString cerro = QString::fromStdString(camion.get_Cerro());
     QString capacidad = QString::number(camion.get_Capacidad());
     QString cilin_disponibles = QString::number(camion.get_CilindrosRestantes());
-    ui->Nombrecerrocamion->setText(cerro);
-    ui->capacidadcamion->setText(capacidad +" Cilindros");
-    ui->cilindros_restantes->setText(cilin_disponibles+ " Cilindros");
+    ui->Nombrecerrocamion_2->setText(cerro);
+    ui->capacidadcamion_2->setText(capacidad +" Cilindros");
+    ui->cilindros_restantes_2->setText(cilin_disponibles+ " Cilindros");
     if (camion.get_Estado() == true)
-        ui->Estado->setText("En reparto");
+        ui->Estado_2->setText("En reparto");
     else
-        ui->Estado->setText("Disponible para pedido");
+        ui->Estado_2->setText("Disponible para pedido");
     vector <Pedido> pedidos_camion = camion.get_Pedidos();
     for(int i=0; i<pedidos_camion.size(); i++){
         ui->detalles_pedidos->insertRow(ui->detalles_pedidos->rowCount());
