@@ -61,6 +61,49 @@ color: rgb(255, 255, 255);</string>
     <string>&gt;Solicitudes</string>
    </property>
   </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>150</y>
+     <width>491</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Solicitudes</string>
+   </property>
+   <widget class="QTableWidget" name="detalles_pedidos">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>461</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>¿Entregado?</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Detalles de la solicitud</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+      </font>
+     </property>
+    </column>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>
